@@ -1,9 +1,10 @@
-function getInputValue() {
+function addListItem() {
   let inputValue = document.getElementById("inputValue").value;
-  console.log(inputValue);
-  let item = createListItem(inputValue);
-  let list = document.getElementById("list");
-  list.appendChild(item);
+  if (inputValue !== '') {
+    let item = createListItem(inputValue);
+    let list = document.getElementById("list");
+    list.appendChild(item);
+  }
 
 
 }
