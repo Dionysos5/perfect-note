@@ -5,7 +5,6 @@ General purpose note taking app
 This project is going to be evolving one. I will start with the simplest to-do list and then I will keep adding options and updating the tech stack used as I keep learning.
 
 TODO: Add an Empty state prompt\
-TODO: Add an Check button\
 TODO: Add a Remove button\
 TODO: Add an Edit button\
 TODO: Add a Clear all button\
