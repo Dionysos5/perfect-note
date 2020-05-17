@@ -37,11 +37,15 @@ h1 {
 #list li {
   text-align: left;
   color: #1A1D1A;
-  font-style: italic;
   background-color: #FBFCFF;
   border: 1px solid white;
   border-radius: 5px;
   width: 70%;
   list-style: none;
   margin-bottom: 5px;
+}
+
+.checked {
+  text-decoration: line-through;
+  font-style: italic;
 }
