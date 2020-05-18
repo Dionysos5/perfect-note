@@ -35,12 +35,14 @@ h1 {
 }
 
 #list li {
+  display: flex;
+  justify-content: space-between;
   text-align: left;
   color: #1A1D1A;
   background-color: #FBFCFF;
   border: 1px solid white;
   border-radius: 5px;
-  width: 70%;
+  width: 90%;
   list-style: none;
   margin-bottom: 5px;
 }
@@ -48,4 +50,11 @@ h1 {
 .checked {
   text-decoration: line-through;
   font-style: italic;
+}
+
+/* TODO: find a better way to apply style */
+.removed {
+  display: none !important;
+
+
 }

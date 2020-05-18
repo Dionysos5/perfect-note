@@ -5,6 +5,11 @@ list.addEventListener('click', event => {
     const item = event.target;
     toggleCheck(item);
   }
+  else if (event.target.classList.contains('remove')) {
+    const item = event.target;
+    console.log(item);
+    removeItem(item);
+  }
 })
 addButton.addEventListener('click', event => { addListItem(); });
 
@@ -24,6 +29,9 @@ function addListItem() {
 
 function createListItem(value) {
   let item = document.createElement('li');
+  let removeButton = document.createElement('button');
+  removeButton.textContent = 'Remove';
+  removeButton.className = 'remove';
   let node = document.createTextNode(value);
   let checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
@@ -31,6 +39,7 @@ function createListItem(value) {
 
   item.appendChild(checkbox);
   item.appendChild(node);
+  item.appendChild(removeButton);
 
   return item;
 }
@@ -39,4 +48,8 @@ function toggleCheck(listItem) {
   listItem.checked ?
     listItem.parentElement.classList.add('checked') :
     listItem.parentElement.classList.remove('checked');
+}
+
+function removeItem(listItem) {
+  listItem.parentElement.classList.add('removed');
 }
