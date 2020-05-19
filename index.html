@@ -15,7 +15,11 @@
       <input type="text" name="list-item" id="inputValue" placeholder="Wash the dishes">
       <input type="button" value="ADD" id="addButton">
       <ul id="list">
-
+        <div class="empty-state">
+          <img src="list.svg" alt="" height=" 200px">
+          <h2>Add your first todo</h2>
+          <p>What do you want to get done today?</p>
+        </div>
       </ul>
     </div>
   </div>
