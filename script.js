@@ -51,5 +51,6 @@ function toggleCheck(listItem) {
 }
 
 function removeItem(listItem) {
-  listItem.parentElement.classList.add('removed');
+  let parent = listItem.parentNode.parentNode;
+  parent.removeChild(listItem.parentNode);
 }
