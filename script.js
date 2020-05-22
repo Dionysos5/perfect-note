@@ -21,6 +21,7 @@ function addListItem() {
     let item = createListItem(inputValue);
     let list = document.getElementById('list');
     list.appendChild(item);
+    document.getElementById('inputValue').value = '';
 
   }
 
