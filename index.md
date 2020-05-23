@@ -13,7 +13,7 @@
     <div class="note">
       <h1>Perfect Note</h1>
       <input type="text" name="list-item" id="inputValue" placeholder="Wash the dishes">
-      <input type="button" value="ADD" id="addButton"></input>
+      <input type="button" value="+" id="addButton"></input>
       <ul id="list"></ul>
       <div class="empty-state">
         <img src="list.svg" alt="" height=" 200px">

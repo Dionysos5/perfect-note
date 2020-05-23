@@ -35,23 +35,29 @@ function createListItem(value) {
   removeButton.className = 'remove';
   let node = document.createTextNode(value);
   let checkbox = document.createElement('input');
+  let customCheckbox = document.createElement('span');
+  customCheckbox.className = 'checkboxContainer';
   checkbox.type = 'checkbox';
   checkbox.className = 'checkbox';
+  let buttons = document.createElement('div');
+  buttons.className = 'buttons';
+  customCheckbox.appendChild(checkbox)
+  buttons.appendChild(checkbox);
+  buttons.appendChild(removeButton)
 
-  item.appendChild(checkbox);
   item.appendChild(node);
-  item.appendChild(removeButton);
+  item.appendChild(buttons);
 
   return item;
 }
 
 function toggleCheck(listItem) {
   listItem.checked ?
-    listItem.parentElement.classList.add('checked') :
-    listItem.parentElement.classList.remove('checked');
+    listItem.parentElement.parentElement.classList.add('checked') :
+    listItem.parentElement.parentElement.classList.remove('checked');
 }
 
 function removeItem(listItem) {
-  let parent = listItem.parentNode.parentNode;
-  parent.removeChild(listItem.parentNode);
+  let parent = listItem.parentNode.parentNode.parentNode;
+  parent.removeChild(listItem.parentNode.parentNode);
 }

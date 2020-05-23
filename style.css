@@ -30,9 +30,9 @@ h1 {
 }
 
 #inputValue {
-  width: 50%;
+  width: 60%;
   height: 25px;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 
 #list li {
@@ -42,10 +42,16 @@ h1 {
   color: #1a1d1a;
   background-color: #fbfcff;
   border: 1px solid white;
-  border-radius: 5px;
-  width: 90%;
+  border-radius: 30px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px 20px;
+  width: 80%;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.8em;
   list-style: none;
-  margin-bottom: 5px;
+  margin-bottom: 13px;
 }
 
 .checked {
@@ -55,14 +61,14 @@ h1 {
 
 
 #addButton {
-  width: 100px;
-  border-radius: 10%;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
   color: #fff;
   text-shadow: black;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: medium;
+  font-size: large;
 }
 
 .empty-state {
@@ -83,4 +89,8 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 2em;
+}
+
+.checkbox {
+  background-color: #1a1d1a;
 }
