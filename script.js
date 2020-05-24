@@ -24,18 +24,16 @@ function addListItem() {
     document.getElementById('inputValue').value = '';
 
   }
+
+
 }
 
 function createListItem(value) {
-  let node = document.createTextNode(value);
-
-  let item = document.createElement('li');
-  item.appendChild(node);
-  item.appendChild(buttons);
-
   let removeButton = document.createElement('button');
   removeButton.textContent = 'Remove';
   removeButton.className = 'remove';
+
+  let node = document.createTextNode(value);
 
   let checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
@@ -44,6 +42,10 @@ function createListItem(value) {
   buttons.className = 'buttons';
   buttons.appendChild(checkbox);
   buttons.appendChild(removeButton)
+
+  let item = document.createElement('li');
+  item.appendChild(node);
+  item.appendChild(buttons);
 
   return item;
 }
