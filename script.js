@@ -7,7 +7,6 @@ list.addEventListener('click', event => {
   }
   else if (event.target.classList.contains('remove')) {
     const item = event.target;
-    console.log(item);
     removeItem(item);
   }
 })
@@ -37,6 +36,7 @@ function createListItem(value) {
 
   let checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
+  checkbox.className = 'checkbox';
 
   let buttons = document.createElement('div');
   buttons.className = 'buttons';
@@ -54,6 +54,7 @@ function toggleCheck(listItem) {
   listItem.checked ?
     listItem.parentElement.parentElement.classList.add('checked') :
     listItem.parentElement.parentElement.classList.remove('checked');
+
 }
 
 function removeItem(listItem) {
