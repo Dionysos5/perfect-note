@@ -37,6 +37,7 @@ h1 {
 #list li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   text-align: left;
   color: #1a1d1a;
   background-color: #fbfcff;
@@ -74,7 +75,6 @@ h1 {
   display: none;
   color: #1a1d1a;
   margin-right: 40px;
-  /* border: 1px solid black; */
 }
 
 #list:empty {
@@ -88,4 +88,12 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 2em;
+}
+
+.remove {
+  border: none;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
 }

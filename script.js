@@ -9,6 +9,10 @@ list.addEventListener('click', event => {
     const item = event.target;
     removeItem(item);
   }
+  else if (event.target.classList.contains('fa')) {
+    const item = event.target.parentElement;
+    removeItem(item);
+  }
 })
 addButton.addEventListener('click', event => { addListItem(); });
 
@@ -28,9 +32,12 @@ function addListItem() {
 }
 
 function createListItem(value) {
+  let removeIcon = document.createElement('i');
+  removeIcon.classList.add('fa', 'fa-trash', 'fa-2x');
+
   let removeButton = document.createElement('button');
-  removeButton.textContent = 'Remove';
   removeButton.className = 'remove';
+  removeButton.appendChild(removeIcon);
 
   let node = document.createTextNode(value);
 
